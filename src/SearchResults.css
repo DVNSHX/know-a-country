@@ -1,0 +1,16 @@
+.searchcontent{
+	height: 70vh;
+	width: 45vh;
+	padding-left: 20px;
+	padding-top: 10px;
+}
+
+ul{
+	height: 100%;
+	list-style: none;
+	font-family: 'Ubuntu', sans-serif;
+	font-size:2em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}

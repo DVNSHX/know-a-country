@@ -1,0 +1,54 @@
+.searchbox{
+	height: 10vh;
+	width: 45vw;
+	padding-left: 20px;
+	padding-top: 10px;
+	display: flex;
+    flex-direction: row;
+}
+.inputfield{
+	height: 5vh;
+	width: 70%;
+	border: none;
+	border-bottom: 2px solid black;
+	font-family: 'Ubuntu', sans-serif;
+	font-size:3em;
+	outline: none;
+	margin-top: auto;
+}
+::placeholder {
+  color: #9d9bb8;	
+  opacity: 20%;
+}
+
+.btn {
+  appearance: none;
+  outline: none;
+  background-color: transparent;
+  border: 2px solid #3f3d56;
+  border-radius: 0.6em;
+  color: #3f3d56;
+  cursor: pointer;
+  font-size: inherit;
+  font-weight: 400;
+  margin-left: 2%;
+  padding: 1em 2em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  margin-top: auto;
+}
+.btn:hover{
+    color: #fff;
+    outline: 0;
+  }
+
+
+.first {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.first:hover {
+    box-shadow: 0 0 40px 40px #3f3d56 inset;
+  }

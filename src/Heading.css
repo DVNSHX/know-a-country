@@ -1,0 +1,12 @@
+.heading{
+	background: white;
+	height: 20vh;
+	width:45vw;
+	padding-left: 20px;
+	padding-top: 10px;
+}
+
+h1{
+	font-family: 'Ubuntu', sans-serif;
+	font-size:5em;
+}
