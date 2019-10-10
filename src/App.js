@@ -12,10 +12,16 @@ class App extends React.Component{
 			searchfield:'',
 		}
 		this.onSearch = this.onSearch.bind(this);
+		this.onClick = this.onClick.bind(this);
 	}
 
-	componentDidUpdate(){
-		fetch(`https://restcountries-v1.p.rapidapi.com/name/${this.searchfield}`, {
+	onSearch = (event) => {
+		console.log(event.target.value);
+    	this.setState({ searchfield : event.target.value });
+  	}
+
+  	onClick = () => {
+  		fetch(`https://restcountries-v1.p.rapidapi.com/name/${this.state.searchfield}`, {
 		"method": "GET",
 		"headers": {
 		"x-rapidapi-host": "restcountries-v1.p.rapidapi.com",
@@ -26,21 +32,16 @@ class App extends React.Component{
 	.then(data => {this.setState({countrydata:data})
 	})
 	.catch(err => console.log(err));
-}
 
-	onSearch = (event) => {
-		console.log(event.target.value);
-    	this.setState({ searchfield: event.target.value });
-  	}
+   	}
 
 	render(){
 		const {countrydata,searchfield} = this.state;
-		console.log(countrydata)
 		return(
 			<div className='app'>
 				<Heading/>
-				<SearchBox onsearch={this.onSearch}/>
-				<SearchResults/>
+				<SearchBox onSearch={this.onSearch} onClick={this.onClick}/>
+				<SearchResults data={this.countrydata}/>
 			</div>
 		)
 	}
